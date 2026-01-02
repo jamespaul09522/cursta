@@ -45,17 +45,17 @@ import { useRouter, usePathname } from "next/navigation";
         {
             "id": 1,
             "name": "Python",
-            "src": "/python.png"
+            "src": "/python.svg"
         },
         {
             "id": 2,
             "name": "JavaScript",
-            "src": "/js.png"
+            "src": "/javascript.svg"
         },
         {
             "id": 3,
             "name": "TypeScript",
-            "src": "/Typescript.png"
+            "src": "/typescript.svg"
         }
     ]
 
@@ -63,17 +63,17 @@ import { useRouter, usePathname } from "next/navigation";
         {
             "id": 1,
             "name": "Amazon",
-            "src": "/amazon.png",
+            "src": "/amazon.svg",
         },
         {
             "id": 2,
             "name": "Zoho",
-            "src": "/zoho.jpeg"
+            "src": "/zoho.svg"
         },
         {
             "id": 3,
             "name": "TCS",
-            "src": "/tcs.png"
+            "src": "/TCS.jfif"
         }
     ];
 
@@ -96,10 +96,10 @@ import { useRouter, usePathname } from "next/navigation";
             {CompaniesList.map((company) => 
                 <Dialog key={company.id}>
                     <DialogTrigger >
-                        <Card onClick={(e) => handleQuizItem(company.name, e)}>
+                        <Card onClick={(e) => handleQuizItem(company.name, e)} >
                             <CardContent>
                                 <Image  src={company.src} alt="missing" width={100} height={100} className="w-full rounded-xl" />
-                                <h5 className="text-center mt-5">{company.name}</h5>
+                                <h5 className="text-center mt-5 font-semibold">{company.name}</h5>
                             </CardContent>
                         </Card>
                         </DialogTrigger>
@@ -141,10 +141,10 @@ import { useRouter, usePathname } from "next/navigation";
           <FieldTitle>Languages</FieldTitle>
           <FieldSet className="grid grid-cols-1 md:grid-cols-4">
             {languageList.map((language) => 
-                <Card key={language.id}  onClick={(e) => handleQuizItem(language.name, e)}>
+                <Card key={language.id}  onClick={(e) => handleQuizItem(language.name, e)} >
                     <CardContent>
                         <Image src={language.src} alt="missing" width={100} height={100} className="w-full rounded-xl" />
-                        <h5 className="text-center mt-5">{language.name}</h5>
+                        <h5 className="text-center mt-5 font-semibold">{language.name}</h5>
                     </CardContent>
                 </Card>
             )}
